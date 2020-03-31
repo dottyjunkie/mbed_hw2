@@ -30,6 +30,10 @@ int main(){
     wait(1./sample);
 
   }
+for(int i=0;i<sample;i++){
+    pc.printf("%1.3f\n", float(ADCdata[i]));
+    //wait(0.1);
+}
 wait(3.0);
 
 int t1=0;

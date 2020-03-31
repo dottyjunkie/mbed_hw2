@@ -7,7 +7,7 @@ import serial
 import time
 
 
-Fs = 128.0;  # sampling rate
+Fs = 1000.0;  # sampling rate
 
 Ts = 1.0/Fs; # sampling interval
 
@@ -43,9 +43,7 @@ for x in range(0, int(Fs)):
 Y = np.fft.fft(y)/n*2 # fft computing and normalization
 
 Y = Y[range(int(n/2))] # remove the conjugate frequency parts
-maxfreq=np.argmax(abs(Y))
-print(maxfreq)
-print(len(abs(Y)))
+
 # s.writeline(maxfreq)
 
 fig, ax = plt.subplots(2, 1)
